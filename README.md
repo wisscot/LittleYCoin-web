@@ -17,19 +17,6 @@ e.g.
 aws s3 mb s3://littleycoin-web --region us-east-2
 ```
 
-### Upload Your Website Files
-
-Make sure your website's static files are in a local directory.
-Use the following command to upload your website files to the bucket:
-```bash
-aws s3 sync ./your-local-directory s3://your-bucket-name --region your-region
-```
-Replace ./your-local-directory with the path to your website files.
-e.g. 
-```bash
-aws s3 sync ./s3 s3://littleycoin-web --region us-east-2
-```
-
 ### Enable Static Website Hosting
 
 Create a JSON file (e.g., website-configuration.json) with the following content:
@@ -90,5 +77,27 @@ e.g.
 aws s3api put-bucket-policy --bucket littleycoin-web --policy file://bucket-policy.json --region us-east-2
 ```
 
+### Upload Your Website Files
+
+Make sure your website's static files are in a local directory.
+Use the following command to upload your website files to the bucket:
+```bash
+aws s3 sync ./your-local-directory s3://your-bucket-name --region your-region
+```
+Replace ./your-local-directory with the path to your website files.
+e.g. 
+```bash
+aws s3 sync ./s3 s3://littleycoin-web --region us-east-2
+```
+
 ### Visit website 
 http://littleycoin-web.s3-website.us-east-2.amazonaws.com
+
+
+## Develop
+
+run local http server under the folder which contains index.html
+```bash
+python3 -m http.server
+```
+and visit http://localhost:8000
