@@ -4,7 +4,7 @@ Template from HTML5UP, AWS setup with cli by ChatGPT
 
 HTML5 UP: https://html5up.net/
 
-## Step-by-Step Guide for AWS Setup
+## Step-by-Step Guide for AWS Setup (Deprecated, used Github Pages instead)
 
 ### Create an S3 Bucket
 
@@ -101,3 +101,7 @@ run local http server under the folder which contains index.html
 python3 -m http.server
 ```
 and visit http://localhost:8000
+
+
+## Register domain
+Registered littleycoin.com in aws Route 53 manually. Added A and AAAA records for ipv4 and ipv6, respectively. Added CNAME for www subdomain. 
